@@ -1,16 +1,21 @@
-
 {
   "name": "pocketdex",
+  "packageManager": "pnpm@10.10.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
     "dev": "turbo run dev",
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write ."
   },
   "devDependencies": {
-    "turbo": "^1.10.0"
+    "turbo": "^2.5.3",
+    "prettier": "^3.2.5",
+    "eslint": "^9.2.0",
+    "eslint-config-prettier": "^10.1.0",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.32.0",
+    "@typescript-eslint/parser": "^8.32.0"
   }
 }
