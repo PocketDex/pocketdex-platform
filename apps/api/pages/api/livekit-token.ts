@@ -4,7 +4,17 @@ import { AccessToken } from 'livekit-server-sdk';
 const apiKey = process.env.LIVEKIT_API_KEY;
 const apiSecret = process.env.LIVEKIT_API_SECRET;
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  // Allow CORS for local development
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+
   const { room, identity } = req.query;
   if (!room || !identity) {
     return res.status(400).json({ error: 'Missing room or identity' });
@@ -19,9 +29,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   at.addGrant({
     room: room as string,
     roomJoin: true,
-    canPublish: false,
+    canPublish: true,
     canSubscribe: true,
   });
 
-  res.status(200).json({ token: at.toJwt() });
+  const jwt = await at.toJwt();
+  console.log('Generated JWT:', jwt);
+  res.status(200).json({ token: jwt });
 }
