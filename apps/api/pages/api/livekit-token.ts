@@ -31,6 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     roomJoin: true,
     canPublish: true,
     canSubscribe: true,
+    canPublishData: true,
   });
 
   const jwt = await at.toJwt();

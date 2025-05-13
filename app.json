@@ -1,5 +1,8 @@
 {
   "ios": {
     "bundleIdentifier": "com.anonymous.pocketdex"
+  },
+  "android": {
+    "package": "com.anonymous.pocketdex"
   }
 }

@@ -1,112 +1,56 @@
-import React, { useEffect, useState } from 'react';
-import { StyleSheet, View, FlatList, Button } from 'react-native';
-import {
-  AudioSession,
-  LiveKitRoom,
-  useTracks,
-  TrackReferenceOrPlaceholder,
-  VideoTrack,
-  isTrackReference,
-  registerGlobals,
-} from '@livekit/react-native';
-import { Track } from 'livekit-client';
+import React from 'react';
+import { StyleSheet, View, Text, Button, NativeModules } from 'react-native';
+// import { requireNativeComponent } from 'react-native';
+// const BroadcastPickerView = requireNativeComponent('RNBroadcastPickerView');
 
-registerGlobals();
+const { ScreenSharingModule } = NativeModules;
+const API_URL = 'http://10.0.0.156:3000'; // Use your actual API server IP
 
-const LIVEKIT_URL = 'wss://pocketdex-5benn6su.livekit.cloud'; // Replace with your actual URL
+console.log('ScreenSharingModule:', ScreenSharingModule);
 
-export default function PublisherScreen() {
-  console.log('PublisherScreen loaded');
-  const [token, setToken] = useState<string | null>(null);
-  const [connected, setConnected] = useState(false);
-
-  useEffect(() => {
-    // Start the audio session first.
-    AudioSession.startAudioSession();
-
-    // Fetch token from your API
-    const fetchToken = async () => {
-      // const res = await fetch('http://localhost:3000/api/livekit-token?room=test-room&identity=mobile-publisher');
-      const res = await fetch('http://10.0.0.156:3000/api/livekit-token?room=test-room&identity=mobile-publisher'); // terminal command: ifconfig | grep inet
-      const data = await res.json();
-      console.log('Fetched data:', data);
-      setToken(data.token);
-    };
-    fetchToken();
-
-    return () => {
-      AudioSession.stopAudioSession();
-    };
-  }, []);
-
-  if (!token) return <View style={styles.center}><Button title="Loading..." disabled /></View>;
-
-  return (
-    <LiveKitRoom
-      serverUrl={LIVEKIT_URL}
-      token={token}
-      connect={true}
-      audio={true}
-      video={true}
-      options={{
-        adaptiveStream: { pixelDensity: 'screen' },
-      }}
-      onConnected={() => {
-        setConnected(true);
-        console.log('LiveKitRoom connected');
-      }}
-      onDisconnected={() => {
-        setConnected(false);
-        console.log('LiveKitRoom disconnected');
-      }}
-    >
-      <RoomView />
-      <View style={styles.center}>
-        <Button title="Leave Room" onPress={() => setConnected(false)} />
-      </View>
-    </LiveKitRoom>
-  );
+async function fetchLiveKitToken(room: string, identity: string) {
+  const res = await fetch(`${API_URL}/api/livekit-token?room=${room}&identity=${identity}`);
+  const { token } = await res.json();
+  return token;
 }
 
-const RoomView = () => {
-  // Get all camera tracks (including local).
-  const tracks = useTracks([Track.Source.Camera]);
+async function startScreenShare(room: string, identity: string) {
+  console.log('Calling startScreenShare0');
+  const token = await fetchLiveKitToken(room, identity);
+  // Use the advanced method to pass setupInfo (recommended for ReplayKit extension)
+  // ScreenSharingModule.startScreenShareWithSetupInfo(token, room);
+  // If you only want to use the default picker (no setupInfo), use:
+  console.log('Calling startScreenShare');
+  ScreenSharingModule.startScreenShare(token, room);
+}
 
-  useEffect(() => {
-    console.log('Tracks updated:', tracks);
-  }, [tracks]);
-
-  const renderTrack = ({ item }: { item: TrackReferenceOrPlaceholder }) => {
-    if (isTrackReference(item)) {
-      return <VideoTrack trackRef={item} style={styles.participantView} />;
-    } else {
-      return <View style={styles.participantView} />;
-    }
-  };
-
+export default function PublisherScreen() {
+  // Placeholder UI for screen sharing only
+  // Later, this will trigger the native screen sharing extension
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={tracks}
-        renderItem={renderTrack}
-        keyExtractor={(_, idx) => idx.toString()}
+    <View style={styles.center}>
+      <Text style={styles.infoText}>
+        To share your screen, tap 'Start Screen Share' below, then select 'ScreenShareExtension' in the list and tap 'Start Broadcast'.
+      </Text>
+      {/* <BroadcastPickerView /> */}
+      <Button
+        title="Start Screen Share"
+        onPress={() => startScreenShare('test-room', 'ios-screenshare')}
       />
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'stretch',
-    justifyContent: 'center',
-  },
-  participantView: {
-    height: 300,
-  },
   center: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 20,
+  },
+  infoText: {
+    color: '#333',
+    marginBottom: 20,
+    textAlign: 'center',
   },
 }); 

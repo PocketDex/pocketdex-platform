@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,9 +12,125 @@
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		729427A0C1AC44F7B6033499 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03589FA2B2B34B4353448B18 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
+		C938505B2DD1159300CE02DB /* LiveKit in Frameworks */ = {isa = PBXBuildFile; productRef = C938505A2DD1159300CE02DB /* LiveKit */; };
+		C938505D2DD11E7000CE02DB /* LiveKit in Frameworks */ = {isa = PBXBuildFile; productRef = C938505C2DD11E7000CE02DB /* LiveKit */; };
+		C959811B2DD25442001A7589 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99DA7DF2DD029DD00BC32FD /* ReplayKit.framework */; };
+		C95981222DD25442001A7589 /* ScreenShareTestExtension4.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C959811A2DD25442001A7589 /* ScreenShareTestExtension4.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C98B1BDF2DD190AD00581258 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99DA7DF2DD029DD00BC32FD /* ReplayKit.framework */; };
+		C98B1BE92DD190AD00581258 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99DA7DF2DD029DD00BC32FD /* ReplayKit.framework */; };
+		C98B1BEA2DD190AD00581258 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99DA7EB2DD029DE00BC32FD /* UIKit.framework */; };
+		C98B1BF12DD190AD00581258 /* ScreenShareExtension2SetupUI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C98B1BE82DD190AD00581258 /* ScreenShareExtension2SetupUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C98B1BF42DD190AD00581258 /* ScreenShareExtension2.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C98B1BDE2DD190AD00581258 /* ScreenShareExtension2.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C98B1BFE2DD191F000581258 /* LiveKit in Frameworks */ = {isa = PBXBuildFile; productRef = C98B1BFD2DD191F000581258 /* LiveKit */; };
+		C98B1C052DD1963300581258 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99DA7DF2DD029DD00BC32FD /* ReplayKit.framework */; };
+		C98B1C0F2DD1963300581258 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99DA7DF2DD029DD00BC32FD /* ReplayKit.framework */; };
+		C98B1C102DD1963300581258 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99DA7EB2DD029DE00BC32FD /* UIKit.framework */; };
+		C98B1C172DD1963300581258 /* ScreenShareExtension3SetupUI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C98B1C0E2DD1963300581258 /* ScreenShareExtension3SetupUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C98B1C1A2DD1963300581258 /* ScreenShareExtension3.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C98B1C042DD1963300581258 /* ScreenShareExtension3.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C99DA7E02DD029DE00BC32FD /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99DA7DF2DD029DD00BC32FD /* ReplayKit.framework */; };
+		C99DA7EA2DD029DE00BC32FD /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99DA7DF2DD029DD00BC32FD /* ReplayKit.framework */; };
+		C99DA7EC2DD029DE00BC32FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99DA7EB2DD029DE00BC32FD /* UIKit.framework */; };
+		C99DA7F32DD029DE00BC32FD /* ScreenShareExtensionSetupUI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C99DA7E92DD029DE00BC32FD /* ScreenShareExtensionSetupUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C99DA7F62DD029DE00BC32FD /* ScreenShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C99DA7DE2DD029DD00BC32FD /* ScreenShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C99DA8032DD04FF700BC32FD /* ScreenShareSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99DA8022DD04FE700BC32FD /* ScreenShareSocket.swift */; };
+		C99DA8072DD0506E00BC32FD /* ScreenShareSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99DA8062DD0506A00BC32FD /* ScreenShareSocketServer.swift */; };
+		C99DA80E2DD0692800BC32FD /* ScreenSharingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99DA80D2DD0692800BC32FD /* ScreenSharingModule.swift */; };
+		C99DA81C2DD07CE700BC32FD /* ScreenSharingModule.m in Sources */ = {isa = PBXBuildFile; fileRef = C99DA81B2DD07CE700BC32FD /* ScreenSharingModule.m */; };
 		CE4112A0BB8D27ADDFEA8A6F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 534C3594F110AC5585BB77AF /* PrivacyInfo.xcprivacy */; };
 		F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11748412D0307B40044C1D9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C95981202DD25442001A7589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C95981192DD25442001A7589;
+			remoteInfo = ScreenShareTestExtension4;
+		};
+		C98B1BEF2DD190AD00581258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C98B1BE72DD190AD00581258;
+			remoteInfo = ScreenShareExtension2SetupUI;
+		};
+		C98B1BF22DD190AD00581258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C98B1BDD2DD190AD00581258;
+			remoteInfo = ScreenShareExtension2;
+		};
+		C98B1C152DD1963300581258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C98B1C0D2DD1963300581258;
+			remoteInfo = ScreenShareExtension3SetupUI;
+		};
+		C98B1C182DD1963300581258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C98B1C032DD1963300581258;
+			remoteInfo = ScreenShareExtension3;
+		};
+		C99DA7F12DD029DE00BC32FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C99DA7E82DD029DE00BC32FD;
+			remoteInfo = ScreenShareExtensionSetupUI;
+		};
+		C99DA7F42DD029DE00BC32FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C99DA7DD2DD029DD00BC32FD;
+			remoteInfo = ScreenShareExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C99DA7F72DD029DE00BC32FD /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C99DA7F62DD029DE00BC32FD /* ScreenShareExtension.appex in Embed Foundation Extensions */,
+				C98B1C172DD1963300581258 /* ScreenShareExtension3SetupUI.appex in Embed Foundation Extensions */,
+				C98B1C1A2DD1963300581258 /* ScreenShareExtension3.appex in Embed Foundation Extensions */,
+				C98B1BF42DD190AD00581258 /* ScreenShareExtension2.appex in Embed Foundation Extensions */,
+				C95981222DD25442001A7589 /* ScreenShareTestExtension4.appex in Embed Foundation Extensions */,
+				C99DA7F32DD029DE00BC32FD /* ScreenShareExtensionSetupUI.appex in Embed Foundation Extensions */,
+				C98B1BF12DD190AD00581258 /* ScreenShareExtension2SetupUI.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99DA8212DD0E9BB00BC32FD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99DA8242DD0E9D300BC32FD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		03589FA2B2B34B4353448B18 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-mobile/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
@@ -26,11 +142,86 @@
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = mobile/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		C6050929FE8E846A123C8481 /* Pods-mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobile.debug.xcconfig"; path = "Target Support Files/Pods-mobile/Pods-mobile.debug.xcconfig"; sourceTree = "<group>"; };
+		C959811A2DD25442001A7589 /* ScreenShareTestExtension4.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenShareTestExtension4.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98B1BDE2DD190AD00581258 /* ScreenShareExtension2.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenShareExtension2.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98B1BE82DD190AD00581258 /* ScreenShareExtension2SetupUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenShareExtension2SetupUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98B1C042DD1963300581258 /* ScreenShareExtension3.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenShareExtension3.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C98B1C0E2DD1963300581258 /* ScreenShareExtension3SetupUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenShareExtension3SetupUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C99DA7DE2DD029DD00BC32FD /* ScreenShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C99DA7DF2DD029DD00BC32FD /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		C99DA7E92DD029DE00BC32FD /* ScreenShareExtensionSetupUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenShareExtensionSetupUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C99DA7EB2DD029DE00BC32FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C99DA8022DD04FE700BC32FD /* ScreenShareSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShareSocket.swift; sourceTree = "<group>"; };
+		C99DA8062DD0506A00BC32FD /* ScreenShareSocketServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShareSocketServer.swift; sourceTree = "<group>"; };
+		C99DA80D2DD0692800BC32FD /* ScreenSharingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSharingModule.swift; sourceTree = "<group>"; };
+		C99DA81B2DD07CE700BC32FD /* ScreenSharingModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenSharingModule.m; sourceTree = "<group>"; };
 		CD7E7B80A21AFF57C1BECB5A /* Pods-mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobile.release.xcconfig"; path = "Target Support Files/Pods-mobile/Pods-mobile.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F11748412D0307B40044C1D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = mobile/AppDelegate.swift; sourceTree = "<group>"; };
 		F11748442D0722820044C1D9 /* mobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "mobile-Bridging-Header.h"; path = "mobile/mobile-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C95981252DD25442001A7589 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C95981192DD25442001A7589 /* ScreenShareTestExtension4 */;
+		};
+		C98B1BF92DD190AD00581258 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C98B1BDD2DD190AD00581258 /* ScreenShareExtension2 */;
+		};
+		C98B1BFB2DD190AD00581258 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C98B1BE72DD190AD00581258 /* ScreenShareExtension2SetupUI */;
+		};
+		C98B1C1B2DD1963300581258 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C98B1C032DD1963300581258 /* ScreenShareExtension3 */;
+		};
+		C98B1C1F2DD1963300581258 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C98B1C0D2DD1963300581258 /* ScreenShareExtension3SetupUI */;
+		};
+		C99DA7FC2DD029DE00BC32FD /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C99DA7DD2DD029DD00BC32FD /* ScreenShareExtension */;
+		};
+		C99DA7FE2DD029DE00BC32FD /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C99DA7E82DD029DE00BC32FD /* ScreenShareExtensionSetupUI */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		C959811C2DD25442001A7589 /* ScreenShareTestExtension4 */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C95981252DD25442001A7589 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ScreenShareTestExtension4; sourceTree = "<group>"; };
+		C98B1BE02DD190AD00581258 /* ScreenShareExtension2 */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C98B1BF92DD190AD00581258 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ScreenShareExtension2; sourceTree = "<group>"; };
+		C98B1BEB2DD190AD00581258 /* ScreenShareExtension2SetupUI */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C98B1BFB2DD190AD00581258 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ScreenShareExtension2SetupUI; sourceTree = "<group>"; };
+		C98B1C062DD1963300581258 /* ScreenShareExtension3 */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C98B1C1B2DD1963300581258 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ScreenShareExtension3; sourceTree = "<group>"; };
+		C98B1C112DD1963300581258 /* ScreenShareExtension3SetupUI */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C98B1C1F2DD1963300581258 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ScreenShareExtension3SetupUI; sourceTree = "<group>"; };
+		C99DA7E12DD029DE00BC32FD /* ScreenShareExtension */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C99DA7FC2DD029DE00BC32FD /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ScreenShareExtension; sourceTree = "<group>"; };
+		C99DA7ED2DD029DE00BC32FD /* ScreenShareExtensionSetupUI */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (C99DA7FE2DD029DE00BC32FD /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ScreenShareExtensionSetupUI; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
@@ -38,6 +229,68 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A76F48C8F65C3B44E020644 /* libPods-mobile.a in Frameworks */,
+				C938505D2DD11E7000CE02DB /* LiveKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C95981172DD25442001A7589 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C959811B2DD25442001A7589 /* ReplayKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98B1BDB2DD190AD00581258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98B1BDF2DD190AD00581258 /* ReplayKit.framework in Frameworks */,
+				C98B1BFE2DD191F000581258 /* LiveKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98B1BE52DD190AD00581258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98B1BE92DD190AD00581258 /* ReplayKit.framework in Frameworks */,
+				C98B1BEA2DD190AD00581258 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98B1C012DD1963300581258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98B1C052DD1963300581258 /* ReplayKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98B1C0B2DD1963300581258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C98B1C0F2DD1963300581258 /* ReplayKit.framework in Frameworks */,
+				C98B1C102DD1963300581258 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99DA7DB2DD029DD00BC32FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C938505B2DD1159300CE02DB /* LiveKit in Frameworks */,
+				C99DA7E02DD029DE00BC32FD /* ReplayKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99DA7E62DD029DE00BC32FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C99DA7EA2DD029DE00BC32FD /* ReplayKit.framework in Frameworks */,
+				C99DA7EC2DD029DE00BC32FD /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +300,10 @@
 		13B07FAE1A68108700A75B9A /* mobile */ = {
 			isa = PBXGroup;
 			children = (
+				C99DA81B2DD07CE700BC32FD /* ScreenSharingModule.m */,
+				C99DA80D2DD0692800BC32FD /* ScreenSharingModule.swift */,
+				C99DA8062DD0506A00BC32FD /* ScreenShareSocketServer.swift */,
+				C99DA8022DD04FE700BC32FD /* ScreenShareSocket.swift */,
 				F11748412D0307B40044C1D9 /* AppDelegate.swift */,
 				F11748442D0722820044C1D9 /* mobile-Bridging-Header.h */,
 				BB2F792B24A3F905000567C9 /* Supporting */,
@@ -63,6 +320,8 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				53BE4213CD94988A29ACBA78 /* libPods-mobile.a */,
+				C99DA7DF2DD029DD00BC32FD /* ReplayKit.framework */,
+				C99DA7EB2DD029DE00BC32FD /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -87,6 +346,13 @@
 			children = (
 				13B07FAE1A68108700A75B9A /* mobile */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				C99DA7E12DD029DE00BC32FD /* ScreenShareExtension */,
+				C99DA7ED2DD029DE00BC32FD /* ScreenShareExtensionSetupUI */,
+				C98B1BE02DD190AD00581258 /* ScreenShareExtension2 */,
+				C98B1BEB2DD190AD00581258 /* ScreenShareExtension2SetupUI */,
+				C98B1C062DD1963300581258 /* ScreenShareExtension3 */,
+				C98B1C112DD1963300581258 /* ScreenShareExtension3SetupUI */,
+				C959811C2DD25442001A7589 /* ScreenShareTestExtension4 */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				EEED3236197088C1CFD68EE8 /* Pods */,
@@ -101,6 +367,13 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* mobile.app */,
+				C99DA7DE2DD029DD00BC32FD /* ScreenShareExtension.appex */,
+				C99DA7E92DD029DE00BC32FD /* ScreenShareExtensionSetupUI.appex */,
+				C98B1BDE2DD190AD00581258 /* ScreenShareExtension2.appex */,
+				C98B1BE82DD190AD00581258 /* ScreenShareExtension2SetupUI.appex */,
+				C98B1C042DD1963300581258 /* ScreenShareExtension3.appex */,
+				C98B1C0E2DD1963300581258 /* ScreenShareExtension3SetupUI.appex */,
+				C959811A2DD25442001A7589 /* ScreenShareTestExtension4.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,15 +419,181 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
 				61126470822CDEE7374DFFF8 /* [CP] Embed Pods Frameworks */,
+				C99DA7F72DD029DE00BC32FD /* Embed Foundation Extensions */,
+				C99DA8242DD0E9D300BC32FD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C99DA7F22DD029DE00BC32FD /* PBXTargetDependency */,
+				C99DA7F52DD029DE00BC32FD /* PBXTargetDependency */,
+				C98B1BF02DD190AD00581258 /* PBXTargetDependency */,
+				C98B1BF32DD190AD00581258 /* PBXTargetDependency */,
+				C98B1C162DD1963300581258 /* PBXTargetDependency */,
+				C98B1C192DD1963300581258 /* PBXTargetDependency */,
+				C95981212DD25442001A7589 /* PBXTargetDependency */,
 			);
 			name = mobile;
 			productName = mobile;
 			productReference = 13B07F961A680F5B00A75B9A /* mobile.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C95981192DD25442001A7589 /* ScreenShareTestExtension4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C95981262DD25442001A7589 /* Build configuration list for PBXNativeTarget "ScreenShareTestExtension4" */;
+			buildPhases = (
+				C95981162DD25442001A7589 /* Sources */,
+				C95981172DD25442001A7589 /* Frameworks */,
+				C95981182DD25442001A7589 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C959811C2DD25442001A7589 /* ScreenShareTestExtension4 */,
+			);
+			name = ScreenShareTestExtension4;
+			packageProductDependencies = (
+			);
+			productName = ScreenShareTestExtension4;
+			productReference = C959811A2DD25442001A7589 /* ScreenShareTestExtension4.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		C98B1BDD2DD190AD00581258 /* ScreenShareExtension2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C98B1BFA2DD190AD00581258 /* Build configuration list for PBXNativeTarget "ScreenShareExtension2" */;
+			buildPhases = (
+				C98B1BDA2DD190AD00581258 /* Sources */,
+				C98B1BDB2DD190AD00581258 /* Frameworks */,
+				C98B1BDC2DD190AD00581258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C98B1BE02DD190AD00581258 /* ScreenShareExtension2 */,
+			);
+			name = ScreenShareExtension2;
+			packageProductDependencies = (
+				C98B1BFD2DD191F000581258 /* LiveKit */,
+			);
+			productName = ScreenShareExtension2;
+			productReference = C98B1BDE2DD190AD00581258 /* ScreenShareExtension2.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		C98B1BE72DD190AD00581258 /* ScreenShareExtension2SetupUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C98B1BFC2DD190AD00581258 /* Build configuration list for PBXNativeTarget "ScreenShareExtension2SetupUI" */;
+			buildPhases = (
+				C98B1BE42DD190AD00581258 /* Sources */,
+				C98B1BE52DD190AD00581258 /* Frameworks */,
+				C98B1BE62DD190AD00581258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C98B1BEB2DD190AD00581258 /* ScreenShareExtension2SetupUI */,
+			);
+			name = ScreenShareExtension2SetupUI;
+			packageProductDependencies = (
+			);
+			productName = ScreenShareExtension2SetupUI;
+			productReference = C98B1BE82DD190AD00581258 /* ScreenShareExtension2SetupUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		C98B1C032DD1963300581258 /* ScreenShareExtension3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C98B1C1C2DD1963300581258 /* Build configuration list for PBXNativeTarget "ScreenShareExtension3" */;
+			buildPhases = (
+				C98B1C002DD1963300581258 /* Sources */,
+				C98B1C012DD1963300581258 /* Frameworks */,
+				C98B1C022DD1963300581258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C98B1C062DD1963300581258 /* ScreenShareExtension3 */,
+			);
+			name = ScreenShareExtension3;
+			packageProductDependencies = (
+			);
+			productName = ScreenShareExtension3;
+			productReference = C98B1C042DD1963300581258 /* ScreenShareExtension3.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		C98B1C0D2DD1963300581258 /* ScreenShareExtension3SetupUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C98B1C202DD1963300581258 /* Build configuration list for PBXNativeTarget "ScreenShareExtension3SetupUI" */;
+			buildPhases = (
+				C98B1C0A2DD1963300581258 /* Sources */,
+				C98B1C0B2DD1963300581258 /* Frameworks */,
+				C98B1C0C2DD1963300581258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C98B1C112DD1963300581258 /* ScreenShareExtension3SetupUI */,
+			);
+			name = ScreenShareExtension3SetupUI;
+			packageProductDependencies = (
+			);
+			productName = ScreenShareExtension3SetupUI;
+			productReference = C98B1C0E2DD1963300581258 /* ScreenShareExtension3SetupUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		C99DA7DD2DD029DD00BC32FD /* ScreenShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C99DA7FD2DD029DE00BC32FD /* Build configuration list for PBXNativeTarget "ScreenShareExtension" */;
+			buildPhases = (
+				C99DA7DA2DD029DD00BC32FD /* Sources */,
+				C99DA7DB2DD029DD00BC32FD /* Frameworks */,
+				C99DA7DC2DD029DD00BC32FD /* Resources */,
+				C99DA8212DD0E9BB00BC32FD /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C99DA7E12DD029DE00BC32FD /* ScreenShareExtension */,
+			);
+			name = ScreenShareExtension;
+			packageProductDependencies = (
+				C938505A2DD1159300CE02DB /* LiveKit */,
+			);
+			productName = ScreenShareExtension;
+			productReference = C99DA7DE2DD029DD00BC32FD /* ScreenShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		C99DA7E82DD029DE00BC32FD /* ScreenShareExtensionSetupUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C99DA7FF2DD029DE00BC32FD /* Build configuration list for PBXNativeTarget "ScreenShareExtensionSetupUI" */;
+			buildPhases = (
+				C99DA7E52DD029DE00BC32FD /* Sources */,
+				C99DA7E62DD029DE00BC32FD /* Frameworks */,
+				C99DA7E72DD029DE00BC32FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C99DA7ED2DD029DE00BC32FD /* ScreenShareExtensionSetupUI */,
+			);
+			name = ScreenShareExtensionSetupUI;
+			packageProductDependencies = (
+			);
+			productName = ScreenShareExtensionSetupUI;
+			productReference = C99DA7E92DD029DE00BC32FD /* ScreenShareExtensionSetupUI.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -162,10 +601,32 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1250;
+					};
+					C95981192DD25442001A7589 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					C98B1BDD2DD190AD00581258 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					C98B1BE72DD190AD00581258 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					C98B1C032DD1963300581258 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					C98B1C0D2DD1963300581258 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					C99DA7DD2DD029DD00BC32FD = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					C99DA7E82DD029DE00BC32FD = {
+						CreatedOnToolsVersion = 16.3;
 					};
 				};
 			};
@@ -178,11 +639,21 @@
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
+			packageReferences = (
+				C93850592DD1159300CE02DB /* XCRemoteSwiftPackageReference "client-sdk-ios" */,
+			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* mobile */,
+				C99DA7DD2DD029DD00BC32FD /* ScreenShareExtension */,
+				C99DA7E82DD029DE00BC32FD /* ScreenShareExtensionSetupUI */,
+				C98B1BDD2DD190AD00581258 /* ScreenShareExtension2 */,
+				C98B1BE72DD190AD00581258 /* ScreenShareExtension2SetupUI */,
+				C98B1C032DD1963300581258 /* ScreenShareExtension3 */,
+				C98B1C0D2DD1963300581258 /* ScreenShareExtension3SetupUI */,
+				C95981192DD25442001A7589 /* ScreenShareTestExtension4 */,
 			);
 		};
 /* End PBXProject section */
@@ -196,6 +667,55 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
 				CE4112A0BB8D27ADDFEA8A6F /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C95981182DD25442001A7589 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98B1BDC2DD190AD00581258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98B1BE62DD190AD00581258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98B1C022DD1963300581258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98B1C0C2DD1963300581258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99DA7DC2DD029DD00BC32FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99DA7E72DD029DE00BC32FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,12 +845,103 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C99DA81C2DD07CE700BC32FD /* ScreenSharingModule.m in Sources */,
 				F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */,
+				C99DA8032DD04FF700BC32FD /* ScreenShareSocket.swift in Sources */,
+				C99DA80E2DD0692800BC32FD /* ScreenSharingModule.swift in Sources */,
 				729427A0C1AC44F7B6033499 /* ExpoModulesProvider.swift in Sources */,
+				C99DA8072DD0506E00BC32FD /* ScreenShareSocketServer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C95981162DD25442001A7589 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98B1BDA2DD190AD00581258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98B1BE42DD190AD00581258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98B1C002DD1963300581258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C98B1C0A2DD1963300581258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99DA7DA2DD029DD00BC32FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99DA7E52DD029DE00BC32FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C95981212DD25442001A7589 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C95981192DD25442001A7589 /* ScreenShareTestExtension4 */;
+			targetProxy = C95981202DD25442001A7589 /* PBXContainerItemProxy */;
+		};
+		C98B1BF02DD190AD00581258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C98B1BE72DD190AD00581258 /* ScreenShareExtension2SetupUI */;
+			targetProxy = C98B1BEF2DD190AD00581258 /* PBXContainerItemProxy */;
+		};
+		C98B1BF32DD190AD00581258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C98B1BDD2DD190AD00581258 /* ScreenShareExtension2 */;
+			targetProxy = C98B1BF22DD190AD00581258 /* PBXContainerItemProxy */;
+		};
+		C98B1C162DD1963300581258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C98B1C0D2DD1963300581258 /* ScreenShareExtension3SetupUI */;
+			targetProxy = C98B1C152DD1963300581258 /* PBXContainerItemProxy */;
+		};
+		C98B1C192DD1963300581258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C98B1C032DD1963300581258 /* ScreenShareExtension3 */;
+			targetProxy = C98B1C182DD1963300581258 /* PBXContainerItemProxy */;
+		};
+		C99DA7F22DD029DE00BC32FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C99DA7E82DD029DE00BC32FD /* ScreenShareExtensionSetupUI */;
+			targetProxy = C99DA7F12DD029DE00BC32FD /* PBXContainerItemProxy */;
+		};
+		C99DA7F52DD029DE00BC32FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C99DA7DD2DD029DD00BC32FD /* ScreenShareExtension */;
+			targetProxy = C99DA7F42DD029DE00BC32FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
@@ -348,7 +959,8 @@
 					"FB_SONARKIT_ENABLED=1",
 				);
 				INFOPLIST_FILE = mobile/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				INFOPLIST_KEY_CFBundleDisplayName = PocketDex;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,7 +972,7 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.robertfikesiv.pocketdex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rf4.pocketdex;
 				PRODUCT_NAME = mobile;
 				SWIFT_OBJC_BRIDGING_HEADER = "mobile/mobile-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -381,7 +993,8 @@
 				DEVELOPMENT_TEAM = S4QZ4WCDH3;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = mobile/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				INFOPLIST_KEY_CFBundleDisplayName = PocketDex;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -393,7 +1006,7 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.robertfikesiv.pocketdex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rf4.pocketdex;
 				PRODUCT_NAME = mobile;
 				SWIFT_OBJC_BRIDGING_HEADER = "mobile/mobile-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -522,6 +1135,597 @@
 			};
 			name = Release;
 		};
+		C95981232DD25442001A7589 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ScreenShareTestExtension4/ScreenShareTestExtension4.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = S4QZ4WCDH3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenShareTestExtension4/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareTestExtension4;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rf4.pocketdex.ScreenShareTestExtension4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C95981242DD25442001A7589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ScreenShareTestExtension4/ScreenShareTestExtension4.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = S4QZ4WCDH3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenShareTestExtension4/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareTestExtension4;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rf4.pocketdex.ScreenShareTestExtension4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C98B1BF52DD190AD00581258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ScreenShareExtension2/ScreenShareExtension2.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = S4QZ4WCDH3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenShareExtension2/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareExtension2;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rf4.pocketdex.ScreenShareExtension2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C98B1BF62DD190AD00581258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ScreenShareExtension2/ScreenShareExtension2.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = S4QZ4WCDH3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenShareExtension2/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareExtension2;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rf4.pocketdex.ScreenShareExtension2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C98B1BF72DD190AD00581258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = S4QZ4WCDH3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenShareExtension2SetupUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareExtension2SetupUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rf4.pocketdex.ScreenShareExtension2SetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C98B1BF82DD190AD00581258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = S4QZ4WCDH3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenShareExtension2SetupUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareExtension2SetupUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rf4.pocketdex.ScreenShareExtension2SetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C98B1C1D2DD1963300581258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ScreenShareExtension3/ScreenShareExtension3.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = S4QZ4WCDH3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenShareExtension3/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareExtension3;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rf4.pocketdex.ScreenShareExtension3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C98B1C1E2DD1963300581258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ScreenShareExtension3/ScreenShareExtension3.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = S4QZ4WCDH3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenShareExtension3/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareExtension3;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rf4.pocketdex.ScreenShareExtension3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C98B1C212DD1963300581258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = S4QZ4WCDH3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenShareExtension3SetupUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareExtension3SetupUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rf4.pocketdex.ScreenShareExtension3SetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C98B1C222DD1963300581258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = S4QZ4WCDH3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenShareExtension3SetupUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareExtension3SetupUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rf4.pocketdex.ScreenShareExtension3SetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C99DA7F82DD029DE00BC32FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ScreenShareExtension/ScreenShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = S4QZ4WCDH3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "PocketDex Screen Share";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rf4.pocketdex.ScreenShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C99DA7F92DD029DE00BC32FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ScreenShareExtension/ScreenShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = S4QZ4WCDH3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "PocketDex Screen Share";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rf4.pocketdex.ScreenShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C99DA7FA2DD029DE00BC32FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ScreenShareExtensionSetupUI/ScreenShareExtensionSetupUI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = S4QZ4WCDH3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenShareExtensionSetupUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareExtensionSetupUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rf4.pocketdex.ScreenShareExtensionSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C99DA7FB2DD029DE00BC32FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ScreenShareExtensionSetupUI/ScreenShareExtensionSetupUI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = S4QZ4WCDH3;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenShareExtensionSetupUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenShareExtensionSetupUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rf4.pocketdex.ScreenShareExtensionSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -543,7 +1747,99 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		C95981262DD25442001A7589 /* Build configuration list for PBXNativeTarget "ScreenShareTestExtension4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C95981232DD25442001A7589 /* Debug */,
+				C95981242DD25442001A7589 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C98B1BFA2DD190AD00581258 /* Build configuration list for PBXNativeTarget "ScreenShareExtension2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C98B1BF52DD190AD00581258 /* Debug */,
+				C98B1BF62DD190AD00581258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C98B1BFC2DD190AD00581258 /* Build configuration list for PBXNativeTarget "ScreenShareExtension2SetupUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C98B1BF72DD190AD00581258 /* Debug */,
+				C98B1BF82DD190AD00581258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C98B1C1C2DD1963300581258 /* Build configuration list for PBXNativeTarget "ScreenShareExtension3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C98B1C1D2DD1963300581258 /* Debug */,
+				C98B1C1E2DD1963300581258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C98B1C202DD1963300581258 /* Build configuration list for PBXNativeTarget "ScreenShareExtension3SetupUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C98B1C212DD1963300581258 /* Debug */,
+				C98B1C222DD1963300581258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C99DA7FD2DD029DE00BC32FD /* Build configuration list for PBXNativeTarget "ScreenShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C99DA7F82DD029DE00BC32FD /* Debug */,
+				C99DA7F92DD029DE00BC32FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C99DA7FF2DD029DE00BC32FD /* Build configuration list for PBXNativeTarget "ScreenShareExtensionSetupUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C99DA7FA2DD029DE00BC32FD /* Debug */,
+				C99DA7FB2DD029DE00BC32FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C93850592DD1159300CE02DB /* XCRemoteSwiftPackageReference "client-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/livekit/client-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C938505A2DD1159300CE02DB /* LiveKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C93850592DD1159300CE02DB /* XCRemoteSwiftPackageReference "client-sdk-ios" */;
+			productName = LiveKit;
+		};
+		C938505C2DD11E7000CE02DB /* LiveKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C93850592DD1159300CE02DB /* XCRemoteSwiftPackageReference "client-sdk-ios" */;
+			productName = LiveKit;
+		};
+		C98B1BFD2DD191F000581258 /* LiveKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C93850592DD1159300CE02DB /* XCRemoteSwiftPackageReference "client-sdk-ios" */;
+			productName = LiveKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }
